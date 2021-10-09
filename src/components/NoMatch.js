@@ -12,6 +12,7 @@ const NoMatchSection = styled.section`
     align-items: center;
     justify-content: center;
 `;
+
 const NoMatch = () => {
     return (
         <NoMatchSection>

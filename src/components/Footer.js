@@ -4,9 +4,10 @@ import styled from "styled-components";
 
 const FooterSection = styled.section`
   width: 100%;
-  height: 250px;
   padding: 4rem 5rem;
   background: #000;
+  position: relative;
+  margin-top: auto;
 
   @media screen and (max-width: 768px) {
     height: 30%;

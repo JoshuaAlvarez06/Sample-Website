@@ -62,16 +62,17 @@ const HeroImage = styled.img`
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  animation-duration: 2s;
-  animation-name: slidein; 
-
-  @keyframes slidein {
-      from {
-        width: 150vw;
-      } 
-      to {
-        width: 100vw;
-      }
+  animation: fadeIn 2s;
+  opacity: 1;
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+     opacity: 1;
+    }
+  }
 `;
 const HeroContent = styled.div`
   position: relative;

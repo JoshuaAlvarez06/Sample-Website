@@ -130,13 +130,14 @@ const arrowButtons = css`
 `;
 
 const PrevArrow = styled(IoArrowBack)`
-  ${arrowButtons}
+  ${arrowButtons},
+  background-color: transparent;
 `;
 const NextArrow = styled(IoArrowForward)`
   ${arrowButtons}
 `;
 
-const Hero = ({ slides }) => {
+const Hero = ({ slides, buttonDisplay, centerText }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
   const timeout = useRef(null);
@@ -169,6 +170,14 @@ const Hero = ({ slides }) => {
     return null;
   }
 
+  let headerCenter;
+  if (centerText === "true") {
+    headerCenter = {
+      textAlign: "center",
+      fontSize: "4rem"
+    }
+  }
+
   return (
     <HeroSection>
       <HeroWrapper>
@@ -179,9 +188,9 @@ const Hero = ({ slides }) => {
                 <HeroSlider>
                   <HeroImage src={slide.image} alt={slide.alt} />
                   <HeroContent>
-                    <h1>{slide.title}</h1>
+                    <h1 style={headerCenter}>{slide.title}</h1>
                     <p>{slide.price}</p>
-                    <Button
+                    {buttonDisplay && <Button
                       to={slide.path}
                       primary="true"
                       css={`
@@ -190,7 +199,7 @@ const Hero = ({ slides }) => {
                     >
                       {slide.label}
                       <Arrow />
-                    </Button>
+                    </Button>}
                   </HeroContent>
                 </HeroSlider>
               )}

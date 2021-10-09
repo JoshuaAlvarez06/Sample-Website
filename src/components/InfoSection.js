@@ -4,7 +4,7 @@ import { Button } from "./Button";
 
 const Section = styled.section`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 4rem 0rem;
 `;
 
@@ -66,6 +66,7 @@ const InfoSection = ({
   buttonLabel,
   reverse,
   image,
+  displayButton
 }) => {
   return (
     <Section>
@@ -74,12 +75,12 @@ const InfoSection = ({
           <h1>{heading}</h1>
           <p>{paragraphOne}</p>
           <p>{paragraphTwo}</p>
-          <Button to="/homes" primary="true">
+          {displayButton && <Button to="/homes" primary="true">
             {buttonLabel}
-          </Button>
+          </Button>}
         </ColumnLeft>
         <ColumnRight reverse={reverse}>
-          <img src={image} alt="home" />
+          <img src={image} alt="home" style={{objectFit: "cover"}} />
         </ColumnRight>
       </Container>
     </Section>

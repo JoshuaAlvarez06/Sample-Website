@@ -7,10 +7,10 @@ const FooterSection = styled.section`
   padding: 4rem 5rem;
   background: #000;
   position: relative;
-  margin-top: auto;
+  top: 30vh;
 
   @media screen and (max-width: 768px) {
-    height: 30%;
+    top: 120vh;
   }
 `;
 

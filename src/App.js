@@ -22,7 +22,7 @@ function App() {
     <>
       <GlobalStyle />
       <Navbar toggle={toggle}/>
-      <Dropdown isOpen={isOpen} toggle={toggle}/>
+      {isOpen && <Dropdown isOpen={isOpen} toggle={toggle}/>}
       <Switch>
         <Route exact path="/">
           <Hero slides={SliderData}/>

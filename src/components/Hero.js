@@ -62,7 +62,7 @@ const HeroImage = styled.img`
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-name: slidein; 
 
   @keyframes slidein {

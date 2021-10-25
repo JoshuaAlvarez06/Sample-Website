@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
-import { Button, RealButton } from './Button';
+import { RealButton } from './Button';
 
 const ContactSection = styled.section`
   height: 100vh;
